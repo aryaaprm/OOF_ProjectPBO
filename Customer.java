@@ -29,7 +29,8 @@ public class Customer extends User {
                     validChoice = true;
                     break;
                 case "2":
-                    System.out.println("Under Process - Nantinya akan berisi menu tambah restaurant");
+                    Order.createOrder();
+                    showMenu();
                     validChoice = true;
                     break;
                 case "3":
