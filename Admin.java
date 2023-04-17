@@ -2,7 +2,7 @@ package OOF_ProjectPBO;
 
 import java.util.Scanner;
 
-class Admin extends User {
+public class Admin extends User {
     private Scanner scanner;
 
     public Admin(String username, String password) {
@@ -12,7 +12,7 @@ class Admin extends User {
 
     @Override
     public void showMenu() {
-        System.out.println("Menu Admin OOF:");
+        System.out.println("\nMenu Admin OOF:");
         System.out.println("1. Lihat Restaurant");
         System.out.println("2. Tambah Data Restaurant");
         System.out.println("3. Hapus Data Restaurant");
@@ -24,20 +24,26 @@ class Admin extends User {
         while (!validChoice) {
             switch (choice) {
                 case "1":
-                    System.out.println("Under Process - Nantinya akan berisi data restaurant");
+                    Restaurant.showRestaurants();
+                    showMenu();
                     validChoice = true;
                     break;
                 case "2":
-                    System.out.println("Under Process - Nantinya akan berisi menu tambah restaurant");
+                    Restaurant.createRestaurant();
+                    System.out.println("Data Restaurant berhasil ditambahkan!");
+                    showMenu();
                     validChoice = true;
                     break;
                 case "3":
-                    System.out.println("Under Process - Nantinya akan berisi menu hapus restaurant");
+                    System.out.print("Masukkan ID Restaurant yang akan dihapus: ");
+                    String idToDelete = scanner.nextLine();
+                    Restaurant.deleteRestaurant(idToDelete);
+                    showMenu();
                     validChoice = true;
                     break;
                 case "4":
-                    LoginMenu LoginMenu = new LoginMenu();
-                    LoginMenu.show();
+                    LoginMenu loginMenu = new LoginMenu();
+                    loginMenu.show();
                     validChoice = true;
                     break;
                 default:
