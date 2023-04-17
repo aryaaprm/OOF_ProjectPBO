@@ -12,9 +12,9 @@ public class Customer extends User {
 
     @Override
     public void showMenu() {
-        System.out.println("Menu Customer OOF:");
+        System.out.println("\nMenu Customer OOF:");
         System.out.println("1. Lihat Restaurant");
-        System.out.println("2. Buat Pesanan");
+        System.out.println("2. Tambah Pesanan");
         System.out.println("3. Lihat Pesanan");
         System.out.println("4. Kembali ke Menu Login");
         System.out.print("Masukan Pilihan Anda: ");
@@ -24,20 +24,21 @@ public class Customer extends User {
         while (!validChoice) {
             switch (choice) {
                 case "1":
-                    System.out.println("Under Process - Nantinya akan berisi data restaurant");
+                    Restaurant.showRestaurants();
+                    showMenu();
                     validChoice = true;
                     break;
                 case "2":
-                    System.out.println("Under Process - Nantinya akan berisi menu untuk membuat pesanan");
+                    System.out.println("Under Process - Nantinya akan berisi menu tambah restaurant");
                     validChoice = true;
                     break;
                 case "3":
-                    System.out.println("Under Process - Nantinya akan berisi menu untuk melihat pesanan");
+                    System.out.println("Under Process - Nantinya akan berisi menu hapus restaurant");
                     validChoice = true;
                     break;
                 case "4":
-                    LoginMenu LoginMenu = new LoginMenu();
-                    LoginMenu.show();
+                    LoginMenu loginMenu = new LoginMenu();
+                    loginMenu.show();
                     validChoice = true;
                     break;
                 default:
