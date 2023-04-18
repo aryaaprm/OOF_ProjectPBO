@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Order {
     private Restaurant restaurant;
+    static ArrayList<Order> orders = new ArrayList<>();
     private List<OrderItem> orderItems;
     private int distance;
     private int AdminCharge = 2000;
@@ -43,6 +44,10 @@ public class Order {
         int totalAdminCharge = AdminCharge;
         totalPrice += deliveryCost + totalAdminCharge;
         return totalPrice;
+    }
+
+    public static void addOrder(Order order){
+        orders.add(order);
     }
 
     public static void createOrder() {
@@ -111,6 +116,29 @@ public class Order {
         System.out.println("Biaya Antar: " + order.getDeliveryCost());
         System.out.println("Biaya Admin: Rp. 2000");
         System.out.println("Total Harga: Rp. " + order.getTotalPrice());
+        addOrder(order);
+    }
+
+    public static void showOrders() {
+        if (orders.isEmpty()) {
+            System.out.println("\nBelum ada data pesanan yang tersimpan.");
+        } else {
+            for (Order order : orders) {
+                System.out.println("\nDetail Pesanan:");
+                System.out.println("Restaurant:");
+                System.out.println("ID: " + order.getRestaurant().getId());
+                System.out.println("Nama: " + order.getRestaurant().getName());
+                System.out.println("Alamat: " + order.getRestaurant().getAlamat());
+                System.out.println("Menu: ");
+                for (OrderItem orderItem : order.getOrderItems()) {
+                    System.out.println(orderItem.getMenu().getName() + " - " + orderItem.getQuantity() + "x - Rp " + orderItem.getMenu().getPrice());
+                }
+                System.out.println("Jarak Antar: " + order.getDistance() + " km");
+                System.out.println("Biaya Antar: " + order.getDeliveryCost());
+                System.out.println("Biaya Admin: Rp. 2000");
+                System.out.println("Total Harga: Rp. " + order.getTotalPrice());
+            }
+        }
     }
 }
 
