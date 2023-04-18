@@ -38,3 +38,5 @@ Jika *customer* memilih lihat pesanan, *customer* dapat melihat kembali data - d
 
 ## Closing
 Sebelumnya, saya mengucapkan terima kasih karena telah membaca laporan *project* ini sampai dengan selesai. Selain itu, saya juga mengucapkan banyak terima kasih kepada teman - teman yang telah membantu saya dalam belajar bahasa Java yang sungguh membuat sakit kepala ini. Saya menyadari bahwa *project* ini masih terdapat banyak sekali kekurangan dan kesalahan di dalamnya. Oleh sebab itu, saya meminta maaf terkait dengan hal tersebut dan juga menerima kritik dan saran agar kedepannya bisa menjadi lebih baik lagi. Terima kasih!
+
+**I Made Arya Adi Pramana - 2205551016**
