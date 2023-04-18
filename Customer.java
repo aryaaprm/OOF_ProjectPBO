@@ -12,12 +12,16 @@ public class Customer extends User {
 
     @Override
     public void showMenu() {
-        System.out.println("\nMenu Customer OOF:");
+        System.out.println("\n=========================================");
+        System.out.println("|            Menu Customer OOF          |");
+        System.out.println("=========================================");
+        System.out.println("Selamat datang di OOF!");
         System.out.println("1. Lihat Restaurant");
         System.out.println("2. Tambah Pesanan");
         System.out.println("3. Lihat Pesanan");
         System.out.println("4. Kembali ke Menu Login");
-        System.out.print("Masukan Pilihan Anda: ");
+        System.out.println("=========================================");
+        System.out.print("Masukan Pilihan Anda (1/2/3/4): ");
         String choice = scanner.nextLine();
 
         boolean validChoice = false;
@@ -45,7 +49,7 @@ public class Customer extends User {
                     break;
                 default:
                     System.out.println("Pilihan tidak sesuai, Coba masukan pilihan kembali!");
-                    System.out.print("Masukan Pilihan Anda: ");
+                    System.out.print("Masukan Pilihan Anda (1/2/3/4): ");
                     choice = scanner.nextLine();
                     break;
             }

@@ -1,6 +1,7 @@
 package OOF_ProjectPBO;
 
 public class User {
+
     private String username;
     private String password;
 
@@ -18,6 +19,6 @@ public class User {
     }
 
     public void showMenu() {
-        System.out.println("Menu User:");
+        System.out.println("");
     }
 }

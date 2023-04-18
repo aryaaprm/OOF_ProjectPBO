@@ -12,12 +12,16 @@ public class Admin extends User {
 
     @Override
     public void showMenu() {
-        System.out.println("\nMenu Admin OOF:");
+        System.out.println("\n=========================================");
+        System.out.println("|             Menu Admin OOF            |");
+        System.out.println("=========================================");
+        System.out.println("Selamat datang di OOF!");
         System.out.println("1. Lihat Restaurant");
         System.out.println("2. Tambah Data Restaurant");
         System.out.println("3. Hapus Data Restaurant");
         System.out.println("4. Kembali ke Menu Login");
-        System.out.print("Masukan Pilihan Anda: ");
+        System.out.println("=========================================");
+        System.out.print("Masukan Pilihan Anda (1/2/3/4): ");
         String choice = scanner.nextLine();
 
         boolean validChoice = false;
@@ -30,11 +34,14 @@ public class Admin extends User {
                     break;
                 case "2":
                     Restaurant.createRestaurant();
-                    System.out.println("Data Restaurant berhasil ditambahkan!");
+                    System.out.println("\nData Restaurant berhasil ditambahkan!");
                     showMenu();
                     validChoice = true;
                     break;
                 case "3":
+                    System.out.println("\n=========================================");
+                    System.out.println("|          Hapus Data Restaurant        |");
+                    System.out.println("=========================================");
                     System.out.print("Masukkan ID Restaurant yang akan dihapus: ");
                     String idToDelete = scanner.nextLine();
                     Restaurant.deleteRestaurant(idToDelete);
@@ -48,7 +55,7 @@ public class Admin extends User {
                     break;
                 default:
                     System.out.println("Pilihan tidak sesuai, Coba masukan pilihan kembali!");
-                    System.out.print("Masukan Pilihan Anda: ");
+                    System.out.print("Masukan Pilihan Anda (1/2/3/4): ");
                     choice = scanner.nextLine();
                     break;
             }

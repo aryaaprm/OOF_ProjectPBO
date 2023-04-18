@@ -45,7 +45,7 @@ public class Restaurant {
             Restaurant restaurant = iterator.next();
             if (restaurant.getId().equals(id)) {
                 iterator.remove();
-                System.out.println("Data Restaurant dengan ID " + id + " berhasil dihapus.");
+                System.out.println("\nData Restaurant dengan ID " + id + " berhasil dihapus.");
                 return;
             }
         }
@@ -54,7 +54,9 @@ public class Restaurant {
 
     public static void createRestaurant() {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("\n=========================================");
+        System.out.println("|         Tambah Data Restaurant        |");
+        System.out.println("=========================================");
         System.out.print("Masukkan ID Restaurant: ");
         String id = scanner.nextLine();
 
@@ -88,7 +90,7 @@ public class Restaurant {
 
         Restaurant restaurant = new Restaurant(id, name, alamat, menus);
 
-        System.out.println("Data Restaurant:");
+        System.out.println("\nData Restaurant:");
         System.out.println("ID: " + restaurant.getId());
         System.out.println("Nama: " + restaurant.getName());
         System.out.println("Kode: " + restaurant.getAlamat());
@@ -102,11 +104,15 @@ public class Restaurant {
 
     public static void showRestaurants() {
         if (restaurants.isEmpty()) {
-            System.out.println("\nBelum ada data restaurant yang tersimpan.");
+            System.out.println("\n=========================================");
+            System.out.println("|Belum ada data restaurant yang disimpan|");
+            System.out.println("=========================================");
         } else {
-            System.out.println("\nData Restaurant:");
+            System.out.println("\n=========================================");
+            System.out.println("|             Data Restaurant           |");
+            System.out.println("=========================================");
             for (Restaurant restaurant : restaurants) {
-                System.out.println("ID: " + restaurant.getId());
+                System.out.println("\nID: " + restaurant.getId());
                 System.out.println("Nama: " + restaurant.getName());
                 System.out.println("Alamat: " + restaurant.getAlamat());
                 System.out.println("Menu: ");

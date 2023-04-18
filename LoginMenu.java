@@ -13,8 +13,12 @@ public class LoginMenu {
     }
 
     public void show() {
-        System.out.println("----OOF (Online Ordering Food)----");
-        System.out.println("-------------Menu Login-----------");
+        System.out.println("=========================================");
+        System.out.println("|                  OOF                  |");
+        System.out.println("|         (Online Ordering Food)        |");
+        System.out.println("=========================================");
+        System.out.println("|               Menu Login              |");
+        System.out.println("=========================================");
         boolean isLoggedIn = false;
         while (!isLoggedIn) {
             System.out.print("- Masukkan username: ");

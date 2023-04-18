@@ -52,7 +52,9 @@ public class Order {
 
     public static void createOrder() {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("\n=========================================");
+        System.out.println("|              Menu Pemesanan           |");
+        System.out.println("=========================================");
         System.out.print("Masukkan ID Restaurant: ");
         String restaurantId = scanner.nextLine();
         Restaurant restaurant = null;
@@ -103,16 +105,16 @@ public class Order {
 
         Order order = new Order(restaurant, orderItems, distance);
 
-        System.out.println("\nDetail Pesanan:");
+        System.out.println("\nDetail Pesanan Anda:");
         System.out.println("Restaurant:");
         System.out.println("ID: " + order.getRestaurant().getId());
         System.out.println("Nama: " + order.getRestaurant().getName());
         System.out.println("Alamat: " + order.getRestaurant().getAlamat());
-        System.out.println("Menu: ");
+        System.out.println("\nMenu: ");
         for (OrderItem orderItem : order.getOrderItems()) {
             System.out.println(orderItem.getMenu().getName() + " - " + orderItem.getQuantity() + "x - Rp " + orderItem.getMenu().getPrice());
         }
-        System.out.println("Jarak Antar: " + order.getDistance() + " km");
+        System.out.println("\nJarak Antar: " + order.getDistance() + " km");
         System.out.println("Biaya Antar: " + order.getDeliveryCost());
         System.out.println("Biaya Admin: Rp. 2000");
         System.out.println("Total Harga: Rp. " + order.getTotalPrice());
@@ -121,15 +123,20 @@ public class Order {
 
     public static void showOrders() {
         if (orders.isEmpty()) {
-            System.out.println("\nBelum ada data pesanan yang tersimpan.");
+            System.out.println("\n=========================================");
+            System.out.println("| Belum ada data pesanan yang tersimpan |");
+            System.out.println("=========================================");
         } else {
+            System.out.println("\n=========================================");
+            System.out.println("|            Detail Data Pesanan        |");
+            System.out.println("=========================================");
             for (Order order : orders) {
-                System.out.println("\nDetail Pesanan:");
-                System.out.println("Restaurant:");
+                System.out.println("\nRestaurant:");
                 System.out.println("ID: " + order.getRestaurant().getId());
                 System.out.println("Nama: " + order.getRestaurant().getName());
                 System.out.println("Alamat: " + order.getRestaurant().getAlamat());
-                System.out.println("Menu: ");
+                System.out.println("\n=========================================");
+                System.out.println("\nMenu: ");
                 for (OrderItem orderItem : order.getOrderItems()) {
                     System.out.println(orderItem.getMenu().getName() + " - " + orderItem.getQuantity() + "x - Rp " + orderItem.getMenu().getPrice());
                 }
