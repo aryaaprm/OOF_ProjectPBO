@@ -6,6 +6,9 @@ OOF merupakan sebuah program sederhana berbasis *Command Prompt* yang memungkink
 ## UML Class Diagram
 UML (*Unified Modelling Language*) adalah suatu metode dalam pemodelan secara visual yang digunakan sebagai sarana perancangan sistem berorientasi objek. Dalam project ini, terdapat tujuh kelas utama yang saling berhubungan antara satu sama lainnya. Hubungan tersebut dapat dilihat pada UML di bawah ini.
 
+![umloof](https://user-images.githubusercontent.com/115071633/232843818-9246f783-1c74-481c-8e57-54b7b41437dd.jpg)
+
+
 ## Program Flow
 Alur dari proses berjalannya program OOF yang telah dijelaskan sebelumnya ialah sebagai berikut.
 
